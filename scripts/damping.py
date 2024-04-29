@@ -18,17 +18,20 @@ def compute(db):
     """
     # Retrieve inputs
     z_pos = db.inputs.z_position
+    max_damp = db.inputs.max_damping
+    height = db.inputs.floating_obj_height
+    half_height = height/2
 
     # Calculate damping based on position
-    if z_pos >= 0.5:
+    if z_pos >= half_height:
         linear_damping = 0.01
         angular_damping = 0.01
-    elif z_pos < -0.5:
-        linear_damping = 2.0
-        angular_damping = 2.0
-    elif -0.5 <= z_pos < 0.5:
-        linear_damping = abs(2.0 * (z_pos - 0.5))
-        angular_damping = abs(2.0 * (z_pos - 0.5))
+    elif z_pos < -half_height:
+        linear_damping = max_damp
+        angular_damping = max_damp
+    elif -half_height <= z_pos < half_height:
+        linear_damping = abs(max_damp * (z_pos - half_height))
+        angular_damping = abs(max_damp * (z_pos - half_height))
 
     # Assign output
     db.outputs.linear_damping = linear_damping
