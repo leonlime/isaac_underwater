@@ -17,9 +17,9 @@ def compute(db):
         Linear and angular damping
     """
     # Retrieve inputs
-    z_pos = db.inputs.z_position
+    z_pos = db.inputs.z_position  # m
     max_damp = db.inputs.max_damping
-    height = db.inputs.floating_obj_height
+    height = db.inputs.floating_obj_height  # m
     half_height = height/2
 
     # Calculate damping based on position
