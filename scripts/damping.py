@@ -1,4 +1,4 @@
-"""Module providind a function to calculate the drags forces of an object"""
+"""Module providind a function to calculate the damping forces of an object"""
 
 def setup(db):
     """
@@ -8,7 +8,7 @@ def setup(db):
 
 def compute(db):
     """
-    Calculates the drag forces of an object based on its position and velocity.
+    Calculates the damping forces of an object based on its position.
 
     Args:
         db: The database object.

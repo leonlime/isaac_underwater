@@ -1,6 +1,4 @@
 """Module providing a function to generate buoyancy forces to an object"""
-import math
-import numpy as np
 
 def setup(db):
     """
@@ -9,13 +7,13 @@ def setup(db):
     pass  # No initialization actions needed in this case
 
 def compute(db):
-    """Calculates buoyancy force and rotates it based on object's orientation.
+    """Calculates a non buoyancy force on the object.
     
     Args:
         db: The database object.
 
     Returns:
-        A rotated buoyancy force.
+        A non rotated buoyancy force.
     """
     # Define constants
     water_density = 1  # kg/m^3
