@@ -25,10 +25,12 @@ The `isaac_underwater` package has been created and tested under Ubuntu 22.04. T
 ## Examples
 ### Floating cube
 ![box](/pictures/box.gif)
+
 This example features a cube floating on water and represents my initial test with Isaac Sim. It is a basic simulation where the cube floats due to buoyancy forces, which are calculated by a script named `buoyancy_forces.py`, located in the `scripts` folder. There is also an associated `damping.py` script to resist movement and create a sense of drag, while this feature has not yet been fully implemented in the example. A current was simulated using the gravity property in Isaac Sim.
 
 ### ROV simulation
 ![rov](/pictures/rov.gif)
+
 In this example, I attempted a more complex task by integrating the box code with an ROV controlled by a gamepad. I applied the same logic to the floating mechanism of the ROV and introduced forces based on the buttons pressed on the gamepad. The rotation matrix for buoyancy forces has not yet been implemented in this version.
 
 #### How to control the ROV
