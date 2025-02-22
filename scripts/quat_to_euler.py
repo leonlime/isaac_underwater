@@ -1,4 +1,5 @@
 """Module providing a function to convert quaternion to Euler angles"""
+
 import numpy as np
 
 def setup(db):
